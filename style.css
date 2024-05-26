@@ -1,0 +1,346 @@
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: var(--bg-color);
+}
+.bg1{
+    background-image: url(images/bgphoto.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fix the background image */
+    background-position: right;
+    width: 100%;
+    height: 100vh;
+}
+:root{
+    --color: White;
+    --bg-color: #0077b6;
+    --accent-color: black;
+}
+#header{
+    width: 100%;
+    height: 10dvh;
+}
+.header-text{
+    margin-top: 10%;
+    font-size: 20px;
+    text-align: start;
+    font-weight: 600;
+    color: var(--bg-color);
+}
+.header-text h1{
+    font-size: 35px;
+    margin-top: 15px;
+}
+.header-text h1 span{
+    color: black;
+}
+
+.container{
+    padding: 10px 10%;
+    background: var(--bg-color);
+    position: fixed;
+    width: 100%;
+    border-radius: 0px 0px 50px 50px;
+    box-shadow: 0 5px 3px -3px rgb(128, 126, 133);
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo a{
+    width: 200px;
+    color: var(--color);
+    transition: 0.5s;
+}
+.logo a:hover{
+    color:#7209b7;
+    
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: var(--color);
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color:white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.content{
+    margin-top: 50px;
+    margin-left: 60px;
+}
+#about{
+    padding: 80px 0;
+    background: var(--bg-color);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    margin-left: 30px;
+    border: 3px black solid;
+}
+.about-col-2{
+    flex-basis: 55%;
+    margin-right: 40px;
+    color: black;
+}
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: whitesmoke;
+}
+h2{
+    color: whitesmoke;
+}
+/*hobby*/
+#services{
+    padding: 30px 0;
+    background: var(--bg-color);
+}
+.container2{
+    color: White;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.hobby-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 30px;
+}
+.hobby-list div{
+    background-color: skyblue;
+    padding: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.hobby-list div h2{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: black;
+    text-align: center;
+}
+.hobby-list div:hover{
+    background: #fff;
+    color: White;
+}
+/*-------contacts-------*/
+#contact{
+    background: var(--bg-color);
+}
+.contact-left{
+    flex-basis: 35%;
+    margin-left: 50px;
+    color: var(--color);
+}
+.contact-right{
+    flex-basis: 50%;
+    margin-top: 100px;
+    margin-right: 50px;
+}
+.contact-left p {
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: whitesmoke;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 20px;
+    color: var(--color);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #7209b7;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background-color: darkblue;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color);
+    margin-left: 160px;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: white;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 18px;
+    border-radius: 6px;
+    color: black;
+}
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    align-content: center;
+}
+form .btn2:hover{
+    background-color: #d20344;
+}
+#foot{
+    background: var(--bg-color);
+}
+
+/* Define animation keyframes */
+@keyframes slideIn {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Apply animation to hobby items */
+.hobby-item {
+    animation: slideIn 0.5s ease-in-out forwards;
+    opacity: 0; /* Initially hide items */
+}
+
+/* Adjust animation delay for each item */
+.hobby-item:nth-child(1) { animation-delay: 0.2s; }
+.hobby-item:nth-child(2) { animation-delay: 0.4s; }
+.hobby-item:nth-child(3) { animation-delay: 0.6s; }
+
+
+
+.about-col-2 {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust alpha value for transparency */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sub-title {
+    color: darkslateblue;
+}
+
+.section {
+    margin-top: 30px;
+}
+
+.section h2 {
+    color: #007bff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+.section ul li i {
+    margin-right: 5px;
+    color: #28a745; /* Green color for bullets */
+}
+
+
+/* Animation Keyframes */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply Animation to Text Elements */
+.animate-text {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate-text:nth-child(1) {
+    animation-name: slideInFromLeft;
+}
+
+.animate-text:nth-child(2) {
+    animation-name: slideInFromRight;
+}
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply Animation to Text Element */
+.animate-text {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
